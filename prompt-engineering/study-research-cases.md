@@ -1,8 +1,10 @@
 # 学习与研究场景的可复制案例
 
-这里给出 3 个可以直接复制、改一改再用的提示词：精读一篇长文或论文、整理考试复习提纲、分步讲一道题。它们都是根据官方方法改写的学习模板，不是网上流传、来历不明的「神级提示词」，也尚未在 ChatGPT、Claude、Grok 等界面里逐条实测。
+这里给出 3 个可以直接复制、改一改再用的提示词：精读一篇长文或论文、整理考试复习提纲、分步讲一道题。它们都是根据官方方法改写的学习模板，不是网上流传、来历不明的「神级提示词」。
 
-使用前请先看 [提示词的设计方法](./design-methods.md) 和 [结构化输出](./structured-output.md)。把文中「把……粘在这里」换成你自己的材料即可。
+2026-11-25（Asia/Shanghai）已在 [grok.com](https://grok.com/) 使用已登录账号、可见模型 Fast，对这三个模板与对应的普通提示词做了对照实测。六个已登录测试都得到了完整回复，状态为 Verified（仅限该产品、该模型、该日的这三组模板）。未登录时发出的第一条被注册墙拦住、没有模型回复，不能当成已完成的提示词测试。详细记录、评分和普通写法对照见 [学习与研究提示词的对照测试（第二轮）](./comparative-tests.md)。ChatGPT、Claude 等其他产品，以及 Grok 的其他模型，尚未实测，不能外推为同样结果。
+
+使用前请先看 [提示词的设计方法](./design-methods.md) 和 [结构化输出](./structured-output.md)。把文中「把……粘在这里」换成你自己的材料即可。下面的可复制正文是建议采用的最终版：案例 2、案例 3 与初稿相同；案例 1 仅按实测做了一处小补充，改动说明见该节。
 
 ## 正文
 
@@ -12,7 +14,7 @@
 
 **依据哪些方法：** Anthropic 建议处理长文档时，把材料放在前面、把问题放在最后；先要求摘录原文，再基于这些摘录分析，避免模型抛开材料自己发挥。他们还建议用 XML 标签分开多份文档。见 [Claude prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) 的 “Long context prompting”。Google 在 [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3”（“Core prompting principles”）中也建议：先提供全部上下文/材料，再把具体指令或问题放在提示词最末尾；可用 “Based on the information above...” / 「根据上面的信息……」作为过渡。
 
-**改了什么：** Anthropic 原例是医疗助手根据病历先摘引再诊断，不适合直接给学生用。这里改成论文/长文精读，保留「材料在前、问题在后、先引原句再分析、用标签隔开」的结构，并加上中文输出标题和「材料未说明」的约束。
+**改了什么：** Anthropic 原例是医疗助手根据病历先摘引再诊断，不适合直接给学生用。这里改成论文/长文精读，保留「材料在前、问题在后、先引原句再分析、用标签隔开」的结构，并加上中文输出标题和「材料未说明」的约束。2026-11-25 在 Grok Fast 上对照普通提示词实测后，高级写法明显更好（评级 A，普通写法为 B），因此保留本模板。实测中模型摘了 6 句原文，但未覆盖原则中与阈值、效应大小、单独 p 值证据很弱相关的限制，导致「限制」一节偏薄。故在摘录指令里补了一句：若问题涉及主张是否成立、证据是否足够或阅读限制，摘录应覆盖作者自己承认的范围限制，以及与问题最直接相关的原则或证据句，不要只摘定义或标题句。这不是新方法，只是把已有的「摘与问题最相关的原句」写得更具体。完整评分见 [对照测试报告](./comparative-tests.md)。
 
 ```text
 <documents>
@@ -26,7 +28,7 @@
 
 你是面向非专业读者的阅读助手。请只根据上面的材料回答，不要补充材料里没有的背景或结论。
 
-请先从材料中摘录与我的问题最相关的 3 到 6 句原文，放进 <quotes> 标签，每句注明大概位置（例如「摘要」「第 2 节」）。然后只根据这些摘录作答。
+请先从材料中摘录与我的问题最相关的 3 到 6 句原文，放进 <quotes> 标签，每句注明大概位置（例如「摘要」「第 2 节」）。如果问题涉及主张是否成立、证据是否足够或阅读限制，摘录时应覆盖作者自己承认的范围限制，以及与问题最直接相关的原则或证据句，不要只摘定义或标题句。然后只根据这些摘录作答。
 
 按下面标题输出，不要加开场白：
 
@@ -56,7 +58,7 @@
 
 **依据哪些方法：** OpenAI 建议按 Identity、Instructions、Examples、Context 组织提示词，并用标题和列表规定输出。见 [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)。Google 建议写明约束和回答格式，需要时用例子固定格式。见 [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)。Anthropic 建议步骤用编号写出，并具体说明格式。见 [Claude prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)。
 
-**改了什么：** 官方文档里没有「大学生考试复习提纲」的现成原模板。下面是按上述结构新写的改写版：加入了课程信息和「只根据笔记、不编造考点」的约束，并用一个短例子锁定输出格式。
+**改了什么：** 官方文档里没有「大学生考试复习提纲」的现成原模板。下面是按上述结构新写的改写版：加入了课程信息和「只根据笔记、不编造考点」的约束，并用一个短例子锁定输出格式。2026-11-25 在 Grok Fast 上对照普通提示词实测后，高级写法明显更好（评级 A，普通写法为 C）：普通写法把未在笔记中的 p 值完整定义、Cronbach’s alpha 的含义和「0.7 以上」等写成了可复习内容，并出现「考试高频考点」这类判断；高级写法对缺口一律标「材料未说明」或直接沿用笔记原句。模板本身无需再改。完整评分见 [对照测试报告](./comparative-tests.md)。
 
 ```text
 # 身份
@@ -104,7 +106,7 @@
 
 **依据哪些方法：** OpenAI 在 Structured Outputs 文档里给过数学辅导例子：系统说明为 “You are a helpful math tutor. Guide the user through the solution step by step.” 输出结构包含 `steps`（每步有 `explanation` 和 `output`）和 `final_answer`。见 [OpenAI Structured model outputs](https://developers.openai.com/api/docs/guides/structured-outputs)。
 
-**改了什么：** 官方例子是 API 的 JSON Schema，题目是 `8x + 7 = -23`。这里改成聊天可粘贴的中文版本，保留同样的字段，并增加「先不要直接报最终答案以外的捷径」「指出最容易错的一步」「我卡住时只提示下一步」这几条学习约束。
+**改了什么：** 官方例子是 API 的 JSON Schema，题目是 `8x + 7 = -23`。这里改成聊天可粘贴的中文版本，保留同样的字段，并增加「先不要直接报最终答案以外的捷径」「指出最容易错的一步」「我卡住时只提示下一步」这几条学习约束。2026-11-25 在 Grok Fast 上对照普通提示词实测后，两种写法都得到了正确的阳性预测值 50%（或 99/198），都没有落入常见错误 99%，评级都是 A。高级写法仍略好：它按规定输出了 `steps` / `final_answer` / 「最容易错的一步」，并把「灵敏度、特异度很高就几乎肯定有病」这一常见误解写进了该节。模板本身无需再改。完整评分见 [对照测试报告](./comparative-tests.md)。
 
 ```text
 你是耐心的讲解助手。请一步一步带我解题，不要只给最终答案，也不要跳步。
@@ -145,14 +147,15 @@
 
 ## 元数据
 
-- 更新时间：2026-11-25（Asia/Shanghai）；同日复核 [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3” 一节
+- 更新时间：2026-11-25（Asia/Shanghai）；同日在 [grok.com](https://grok.com/) 对三个模板做了已登录 Grok Fast 对照实测，并按实测对案例 1 的摘录指令做了上述小补充
 - 来源：
   - [Claude prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)（长文档：材料在前、问题在后、先摘录再分析）
   - [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3”（先提供全部上下文/材料，具体指令或问题放在提示词最末尾；过渡可用 “Based on the information above...” / 「根据上面的信息……」）
   - [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)（Identity / Instructions / Examples / Context）
   - [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)（约束、格式、few-shot）
   - [OpenAI Structured model outputs](https://developers.openai.com/api/docs/guides/structured-outputs)（数学辅导 schema 与原提示）
-- 信息可信度：部分核对（所用方法已对照官方文档；三个模板均为按这些方法改写的学习案例，不是官方原模板，也未在各聊天产品里逐条实测）
-- 平台：通用聊天提示词；案例 3 的字段来自 OpenAI API 示例，聊天版没有 schema 强制
+  - 对照实测记录见 [学习与研究提示词的对照测试（第二轮）](./comparative-tests.md)
+- 信息可信度：部分核对（所用方法已对照上述官方文档；三个模板均为按这些方法改写的学习案例，不是官方原模板。已登录 Grok Fast、2026-11-25 的对照测试为 Verified；ChatGPT、Claude 及其他 Grok 模型尚未实测）
+- 平台：通用聊天提示词；已核对该日 [grok.com](https://grok.com/) 已登录、可见模型 Fast 的三次高级写法与三次普通写法对照。案例 3 的字段来自 OpenAI API 示例，聊天版没有 schema 强制
 - 技能门槛：会把文章、笔记或题目粘贴进提示词，并按自己的课改几个空
-- 费用：不适用（本文是提示词模板，不涉及产品定价）
+- 费用：本文是提示词模板，不涉及产品定价。该日 grok.com 页面未显示本次测试的费用或用量
