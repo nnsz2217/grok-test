@@ -10,7 +10,7 @@
 
 **适用：** 读课程论文、新闻长文、研报或教材章节，先抓住论点，再判断哪些话有依据。
 
-**依据哪些方法：** Anthropic 建议处理长文档时，把材料放在前面、把问题放在最后；先要求摘录原文，再基于这些摘录分析，避免模型抛开材料自己发挥。他们还建议用 XML 标签分开多份文档。见 [Claude prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) 的 “Long context prompting”。Google 对 Gemini 3 也建议先放数据、后放问题。见 [Gemini 3 Developer Guide](https://ai.google.dev/gemini-api/docs/gemini-3)。
+**依据哪些方法：** Anthropic 建议处理长文档时，把材料放在前面、把问题放在最后；先要求摘录原文，再基于这些摘录分析，避免模型抛开材料自己发挥。他们还建议用 XML 标签分开多份文档。见 [Claude prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) 的 “Long context prompting”。Google 在 [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3”（“Core prompting principles”）中也建议：先提供全部上下文/材料，再把具体指令或问题放在提示词最末尾；可用 “Based on the information above...” / 「根据上面的信息……」作为过渡。
 
 **改了什么：** Anthropic 原例是医疗助手根据病历先摘引再诊断，不适合直接给学生用。这里改成论文/长文精读，保留「材料在前、问题在后、先引原句再分析、用标签隔开」的结构，并加上中文输出标题和「材料未说明」的约束。
 
@@ -145,10 +145,10 @@
 
 ## 元数据
 
-- 更新时间：2026-11-25（Asia/Shanghai）
+- 更新时间：2026-11-25（Asia/Shanghai）；同日复核 [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3” 一节
 - 来源：
   - [Claude prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)（长文档：材料在前、问题在后、先摘录再分析）
-  - [Gemini 3 Developer Guide](https://ai.google.dev/gemini-api/docs/gemini-3)（先放数据，后放问题）
+  - [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3”（先提供全部上下文/材料，具体指令或问题放在提示词最末尾；过渡可用 “Based on the information above...” / 「根据上面的信息……」）
   - [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)（Identity / Instructions / Examples / Context）
   - [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)（约束、格式、few-shot）
   - [OpenAI Structured model outputs](https://developers.openai.com/api/docs/guides/structured-outputs)（数学辅导 schema 与原提示）

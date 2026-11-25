@@ -35,7 +35,7 @@ OpenAI 建议，给模型的稳定说明（在 API 里常放在 `developer` 消�
 
 - OpenAI：在上述四段结构里，Context 通常靠近提示词末尾。
 - Anthropic：处理很长的文档时（他们写的是 20k+ tokens），把长材料放在提示词**前面**，把问题放在**最后**；他们还写到，在多文档、较复杂的测试里，问题放在末尾最多可把回答质量提高约 30%。见同一份 [Claude prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices) 的 “Long context prompting”。
-- Google 对 Gemini 3 的建议类似：先放数据，再把具体问题和指令放在后面，并用「根据前面的信息……」把推理锚在材料上。见 [Gemini 3 Developer Guide](https://ai.google.dev/gemini-api/docs/gemini-3)。
+- Google 对 Gemini 3 的建议见 [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3”（“Core prompting principles”）：提供大量上下文（例如文档、代码）时，先提供全部上下文/材料，再把具体指令或问题放在提示词最末尾；大段材料之后用清楚的过渡把问题和材料接上，例如 “Based on the information above...” / 「根据上面的信息……」。
 
 聊天时的实用折中：先粘贴文章或资料，最后再写你的问题和格式要求。
 
@@ -105,12 +105,12 @@ Anthropic 写到：在系统说明里给一个角色，即使只有一句话，�
 
 ## 元数据
 
-- 更新时间：2026-11-25（Asia/Shanghai）
+- 更新时间：2026-11-25（Asia/Shanghai）；同日复核 [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3” 一节
 - 来源：
   - [OpenAI Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)
   - [Claude prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)
   - [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies)
-  - [Gemini 3 Developer Guide](https://ai.google.dev/gemini-api/docs/gemini-3)
+  - [Gemini prompt design strategies](https://ai.google.dev/gemini-api/docs/prompting-strategies) 的 “Gemini 3”（先提供全部上下文/材料，具体指令或问题放在提示词最末尾；过渡可用 “Based on the information above...” / 「根据上面的信息……」）
 - 信息可信度：已核对（方法与出处均对照上述官方文档；文末骨架是按这些方法改写的通用结构，不是官方原模板，也未在各聊天产品里逐条实测）
 - 平台：通用聊天和 API 提示词写法；文中对推理模型与 GPT 模型的对比仅核自 OpenAI 文档
 - 技能门槛：会在 ChatGPT、Claude、Grok 或同类对话框里粘贴并改一段文字
