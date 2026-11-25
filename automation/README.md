@@ -6,8 +6,9 @@
 
 ## 当前内容
 
-- [用 Power Automate 桌面版自动归档课程资料](course-material-auto-filing.md)：在 Windows 上用 Power Automate 桌面版，按扩展名和文件名中的课程关键词，把投放文件夹（如「下载」）里的 PDF、PowerPoint、Word 文件移到对应课程文件夹。个人 Microsoft 帐户可在本地手动或按计划运行；不能当作「文件一出现就由云端立即触发」。
-- [用 Google 快讯邮件跟踪课程、奖学金或论文更新](topic-update-monitoring.md)：只使用官方 Google 快讯页面创建邮件提醒，在 Google 搜索出现匹配的新结果时向邮箱发信。主路径不含 RSS；怎样算订阅到位见该篇完成标准。
+- [用 Power Automate 桌面版自动归档课程资料](course-material-auto-filing.md)：在 Windows 上用 Power Automate 桌面版，按扩展名和文件名中的课程关键词，把投放文件夹里的 PDF、PowerPoint、Word 文件归到对应课程文件夹。个人 Microsoft 帐户可在本地手动运行。2026-11-25 已用「复制文件」和测试副本在 Windows 11 上跑通。
+- [用 Power Automate 桌面版把多份课程 PDF 合成复习包](course-pdf-review-pack.md)：用官方「合并 PDF 文件」把同一门课的多份讲义合成一份新 PDF，不覆盖原件，也不需要 Google 帐户。2026-11-25 已在同一环境跑通；合并后须检查页序，本次测试的页序与文件名 1、2、3 的预期顺序相反。
+- [用 Google 快讯邮件跟踪课程、奖学金或论文更新](topic-update-monitoring.md)：只使用官方 Google 快讯页面创建邮件提醒。这条路**必须有 Google 帐户**；没有该帐户时不要按该篇配置，可改用上面两条已实测的桌面流程。
 
 ## 以后怎么加笔记
 
@@ -30,8 +31,9 @@
 - 更新时间：2026-11-25（Asia/Shanghai）
 - 来源：本目录当前文件清单（本索引及下列主题笔记）；分类范围来自本次知识库结构规划；笔记格式见 [笔记约定](../resources/conventions.md)
   - [course-material-auto-filing.md](course-material-auto-filing.md)
+  - [course-pdf-review-pack.md](course-pdf-review-pack.md)
   - [topic-update-monitoring.md](topic-update-monitoring.md)
-- 信息可信度：索引结构已按当前文件清单核对；两篇主题笔记均为部分核对（对照官方文档起草，未在 Windows 或真实 Google 帐户上实跑），细节以各篇元数据为准。
+- 信息可信度：索引结构已按当前文件清单核对。课程资料归档与课程 PDF 复习包两篇含 2026-11-25 的 Windows 实测，可信度见各篇元数据；Google 快讯一篇仍为对照官方文档的部分核对，且依赖 Google 帐户，本轮未实跑。
 - 平台：不适用（本页是索引）
 - 技能门槛：会改一个 Markdown 文件并提交 Pull Request
 - 费用：不适用（本页是索引，不写具体产品价格）

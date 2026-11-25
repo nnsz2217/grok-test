@@ -1,5 +1,7 @@
 # 用 Google 快讯邮件跟踪课程、奖学金或论文更新
 
+**使用前请先看这条限制：** 本篇主路径必须登录 Google 帐户。若你没有 Google 帐户，不要按本篇配置，也不要把本篇当成已为你跑通的方案。同目录中 [用 Power Automate 桌面版把多份课程 PDF 合成复习包](course-pdf-review-pack.md) 和 [用 Power Automate 桌面版自动归档课程资料](course-material-auto-filing.md) 不依赖 Google 帐户，并已在 Windows 上做过通测。
+
 本篇只使用一条已能对照官方帮助核对的路径：打开 Google 快讯页面、创建快讯，当 Google 搜索出现与主题相关的新结果时，由系统向你的邮箱发邮件。不涉及编写代码，也不把未经官方帮助确认的 RSS 或第三方聚合工具写进主流程。
 
 ## 正文
@@ -137,7 +139,7 @@
   - [创建快讯 - Google 搜索帮助](https://support.google.com/websearch/answer/4815696?hl=zh-CN)（[英文](https://support.google.com/websearch/answer/4815696?hl=en)）
   - [Google 快讯产品页](https://www.google.com/alerts)
   - [创建用于过滤电子邮件的规则 - Gmail 帮助](https://support.google.com/mail/answer/6579?hl=zh-CN)（[英文](https://support.google.com/mail/answer/6579?hl=en)）（仅用于文中标明的可选整理步骤）
-- 信息可信度：部分核对。已打开并对照官方《创建快讯》帮助（中、英）和产品入口，核过创建、修改、删除、取消订阅、故障排除，以及发信条件（找到匹配的新搜索结果才发邮件）、Gmail 建议联系人 `googlealerts-noreply@google.com`。未用真实帐户实际创建快讯，也未等待或核收一封真实快讯邮件。费用官方未列，故标为未知。RSS 未写入主路径，因其未出现在本次核对的《创建快讯》官方步骤中。Gmail 过滤器仅作为可选步骤，且未实机点击。
+- 信息可信度：部分核对。已打开并对照官方《创建快讯》帮助（中、英）和产品入口，核过创建、修改、删除、取消订阅、故障排除，以及发信条件（找到匹配的新搜索结果才发邮件）、Gmail 建议联系人 `googlealerts-noreply@google.com`。未用真实帐户实际创建快讯，也未等待或核收一封真实快讯邮件。本轮明确不测、也不向没有 Google 帐户的读者推荐本篇；可改用同目录已实测的 Power Automate 桌面流程。费用官方未列，故标为未知。RSS 未写入主路径，因其未出现在本次核对的《创建快讯》官方步骤中。Gmail 过滤器仅作为可选步骤，且未实机点击。
 - 平台：Google 快讯网页（https://www.google.com/alerts）及该 Google 帐户邮箱。可选步骤仅核到 Gmail 官方过滤器帮助，未核对其它邮件客户端。
 - 技能门槛：会登录 Google 帐户，能在网页上创建快讯并在邮箱中查看来信；不要求编程。
 - 费用：未知（官方帮助与产品页本次未列出收费或价目；创建步骤未要求付款或 API Key）
