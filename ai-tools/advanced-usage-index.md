@@ -1,8 +1,8 @@
 # 高级使用技巧索引
 
-本页检索 `ai-tools/` 里已经写入的高级技巧。第一批只填 ChatGPT、Grok 和 Codex；DeepSeek、Claude 技巧正文、Gemini、其他工具、跨平台技巧和高级工作流仍是占位，没有可引用的结论。
+本页检索 `ai-tools/` 里已经写入的高级技巧。第一批已填 ChatGPT、Grok 和 Codex。本批增补 DeepSeek 的功能、模型选择、API 与成本，以及 ChatGPT / OpenAI 在 API、模型选择和成本方面原先缺失的笔记。Claude 技巧正文、Gemini、其他工具、跨平台技巧和高级工作流仍是占位，没有可引用的结论。
 
-查询日期为 2026-11-25（Asia/Shanghai）。本批对照官方文档、产品页和官方新闻稿整理，没有登录产品实操。功能状态只用 Officially Documented、Community Reported 或 Unverified，不标 Verified，也不声称已经实测成功。价格未经核对，各篇都不写入金额。需要谷歌帐户的步骤已在对应条目标明。
+查询日期为 2026-11-25（Asia/Shanghai）。各批都对照官方文档、产品页和官方新闻稿整理，没有登录产品实操，也没有发送 API 请求。功能状态只用 Officially Documented、Community Reported 或 Unverified，不标 Verified，也不声称已经实测成功。本批在价格笔记中写入了已对照官方价目页的数字，并标注查询日期；未核对或已过时的金额不采用。需要谷歌帐户的步骤已在对应条目标明。
 
 产品入口、地区限制和 2026-11-25 的访问记录仍以各工具总览为准，本页不重复改写那些记录。
 
@@ -37,8 +37,13 @@
 | 自定义 GPT 计划于 2026-12-11 退役；个人帐户不能新建 GPT | Officially Documented | [插件、自定义 GPT 过渡与定时任务](./chatgpt/plugins-gpts-and-scheduled-tasks.md) |
 | 用插件安装可复用技能和连接 | Officially Documented | 同上 |
 | 定时任务与事件触发任务；项目内任务读不到项目文件 | Officially Documented | 同上 |
+| 分清 ChatGPT 订阅与 OpenAI API，并安全保存密钥 | Officially Documented | [OpenAI API 用法](./chatgpt/openai-api-usage.md) |
+| 第一次 API 调用先用较便宜的模型做试验 | Officially Documented；示例未经本轮运行，为 Unverified | 同上 |
+| 按任务在 API 中选择 Luna / Sol / Astra | Officially Documented | [API 模型选择、官方价格与成本优化](./chatgpt/api-models-pricing-and-cost.md) |
+| 用提示缓存、Batch（及仍可用的 Flex）降低 API 费用 | Officially Documented；Flex 不适用于 GPT-6.2 旗舰 | 同上 |
+| 对照已核对的 Plus / Pro 标价和用量，决定是否另开 API | Officially Documented；Go 的现行美元标价为未知 | 同上 |
 
-主要原始来源包括：[Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)、[Memory in ChatGPT](https://help.openai.com/en/articles/8590148-memory-in-chatgpt)、[Deep research in ChatGPT](https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt)、[Using study mode in ChatGPT](https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt)、[Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt)、[Working with writing blocks and code blocks in ChatGPT](https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt)、[Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)、[ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex)、[GPT-6 and other models in ChatGPT](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt)、[Custom GPT retirement and migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq)、[Plugins in ChatGPT](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt)、[Scheduled tasks in ChatGPT](https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt)。完整出处见各篇文末。
+主要原始来源包括：[Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)、[Memory in ChatGPT](https://help.openai.com/en/articles/8590148-memory-in-chatgpt)、[Deep research in ChatGPT](https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt)、[Using study mode in ChatGPT](https://help.openai.com/en/articles/11780217-using-study-mode-in-chatgpt)、[Uploading files and audio to ChatGPT](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt)、[Working with writing blocks and code blocks in ChatGPT](https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt)、[Model Release Notes](https://help.openai.com/en/articles/9624314-model-release-notes)、[ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex)、[GPT-6 and other models in ChatGPT](https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt)、[Custom GPT retirement and migration FAQ](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq)、[Plugins in ChatGPT](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt)、[Scheduled tasks in ChatGPT](https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt)、[Developer quickstart](https://developers.openai.com/api/docs/quickstart)、[Pricing](https://developers.openai.com/api/docs/pricing)、[Prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching)、[Batch API](https://developers.openai.com/api/docs/guides/batch)、[What is ChatGPT Plus?](https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus)、[About ChatGPT Pro tiers](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers)。完整出处见各篇文末。
 
 ## Grok
 
@@ -76,11 +81,31 @@
 
 主要原始来源包括：[Quickstart](https://learn.chatgpt.com/docs/quickstart)、[Codex CLI](https://learn.chatgpt.com/docs/codex/cli)、[Codex IDE extension](https://learn.chatgpt.com/docs/codex/ide)、[Best practices](https://learn.chatgpt.com/guides/best-practices)、[Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)、[Agent approvals & security](https://learn.chatgpt.com/docs/agent-approvals-security)、[Build skills](https://learn.chatgpt.com/docs/build-skills)、[ChatGPT desktop app for Windows](https://learn.chatgpt.com/docs/windows/windows-app)、[WSL](https://learn.chatgpt.com/docs/windows/wsl)、[ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex)。完整出处见各篇文末。
 
-## 第一批未写入正文的分类
+## DeepSeek
+
+总览：[DeepSeek.md](./DeepSeek.md)。技巧目录：[deepseek/](./deepseek/)。本轮没有登录，也没有发送 API 请求。网页/App 的「免费体验」与 API 计费不是同一套账。价格以官方 API 价目页为准（查询日期 2026-11-25），不以过时的营销页数字为准。
+
+| 技巧 | 可信度 | 笔记 |
+| --- | --- | --- |
+| 按任务开关思考模式和联网搜索；难题再用深度思考搜索 | Officially Documented；界面按钮文案为 Unverified | [网页与 App 的对话功能](./deepseek/chat-features.md) |
+| 上传讲义或论文并限定只根据材料回答 | Officially Documented（产品能力与 API 限额）；网页端具体大小为 Unverified | 同上 |
+| 把要阅读的网址直接放进问题里 | Officially Documented | 同上 |
+| 日常学习优先用网页或 App，只有要按量接入程序时才用 API | Officially Documented | [模型与思考强度怎么选](./deepseek/model-selection.md) |
+| API 默认使用 `deepseek-flash`，不要再用已下线的旧模型名 | Officially Documented | 同上 |
+| 简单问题关闭思考或降低强度 | Officially Documented；示例未经本轮运行，为 Unverified | 同上 |
+| 在开放平台申请密钥，只放进环境变量 | Officially Documented；平台点击路径为 Unverified | [API 用法](./deepseek/api-usage.md) |
+| 用官方地址和示例发出第一次请求 | Officially Documented；示例未经本轮运行，为 Unverified | 同上 |
+| 按官方错误码处理 401 / 402 / 429 / 503 | Officially Documented | 同上 |
+| 按官方高峰/空闲时段和 Flash / Pro 单价估算费用 | Officially Documented；算术示例不是实测账单 | [API 价格与省钱方法](./deepseek/api-pricing-and-cost.md) |
+| 把固定说明和材料放在最前面以争取缓存命中 | Officially Documented；命中率为 Unverified | 同上 |
+| 不急的请求避开工作日高峰；分清模型费用和附加接口费用 | Officially Documented | 同上 |
+
+主要原始来源包括：[首次调用 API](https://api-docs.deepseek.com/zh-cn/)、[模型 & 价格](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)、[思考模式](https://api-docs.deepseek.com/zh-cn/guides/thinking_mode/)、[构建 Chatbot](https://api-docs.deepseek.com/zh-cn/guides/build_a_chatbot/)、[联网工具](https://api-docs.deepseek.com/zh-cn/guides/web_tools/)、[文件解析](https://api-docs.deepseek.com/zh-cn/guides/document_parsing/)、[上下文硬盘缓存](https://api-docs.deepseek.com/zh-cn/guides/kv_cache/)、[限速与隔离](https://api-docs.deepseek.com/zh-cn/quick_start/rate_limit/)、[更新日志](https://api-docs.deepseek.com/updates/)、[用户协议](https://cdn.deepseek.com/policies/zh-CN/deepseek-terms-of-use.html)、[下载页](https://www.deepseek.com/download/)。完整出处见各篇文末。
+
+## 尚未写入技巧正文的分类
 
 这些目录目前只有简短说明，提醒后续再写，不能当成已经研究过的技巧清单：
 
-- [deepseek/](./deepseek/)
 - [claude/](./claude/)（Claude 总览已有，技巧正文待补）
 - [gemini/](./gemini/)
 - [other-tools/](./other-tools/)
@@ -94,12 +119,15 @@
 - **把“现在去新建一个自定义 GPT”当作个人用户的现行步骤：** 官方写明个人帐户不能新建或发布 GPT，自定义 GPT 计划于 2026-12-11 退役。
 - **Grok DeepSearch 作为现行功能名：** 未出现在 2026-11-25 查询的产品页和消费端概览中；本批不按旧名称教授。
 - **Grok 消费端 Projects 的逐步点击教程：** 官方确认功能存在，但本轮未找到与 ChatGPT 相当的操作手册，故不编造步骤。
+- **把 `deepseek-chat`、`deepseek-reasoner` 或 `deepseek-v4-flash` 当作当前推荐的 API 模型名：** 2026-11-25 的官方价目以 `deepseek-flash` 和 `deepseek-v4-pro` 为准；旧名或已下线，或只作为兼容入口并按 Flash 计费。
+- **把官网开放平台介绍页上的 API 标价当作现行价：** 同日该页与官方 API 价目页不一致，且仍出现已过时的“预计 7 月中旬开始峰谷定价”表述。本批只采用 [模型 & 价格](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)。
+- **把 2026-01-16 介绍文章中的 ChatGPT Go 美国标价 8 美元写成现行价：** 现行帮助中心要求以定价页为准，并写明价格可能调整；本批未能从定价页提取可复制的现行数字，故记为未知。
 
 ## 元数据
 
 - 更新时间：2026-11-25（Asia/Shanghai）
-- 来源：本目录当前技巧笔记和各篇文末列出的官方链接；总览与 2026-11-25 访问记录见 [ChatGPT.md](./ChatGPT.md)、[Grok.md](./Grok.md)、[Claude.md](./Claude.md)、[Codex.md](./Codex.md)
-- 信息可信度：部分核对。本页作为索引已与第一批已完成的文件清单对齐。表中对照官方文档的条目为 Officially Documented 或按备注区分；本轮没有登录实操，不能当作上手验证。未完成分类为结构规划已核对，内容待后续研究补充
+- 来源：本目录当前技巧笔记和各篇文末列出的官方链接；总览与 2026-11-25 访问记录见 [ChatGPT.md](./ChatGPT.md)、[Grok.md](./Grok.md)、[Claude.md](./Claude.md)、[Codex.md](./Codex.md)、[DeepSeek.md](./DeepSeek.md)
+- 信息可信度：部分核对。本页作为索引应与第一批及本批已完成的文件清单对齐。表中对照官方文档的条目为 Officially Documented 或按备注区分；本轮没有登录实操，也没有发送 API 请求，不能当作上手验证。未完成分类为结构规划已核对，内容待后续研究补充
 - 平台：见各篇笔记。未实测具体机型
 - 技能门槛：会打开本库中的 Markdown 笔记并按出处核对。使用各产品的门槛见对应笔记
-- 费用：免费 / 付费 / API 计费 / 不适用。未核对手表价，故不写入金额
+- 费用：免费 / 付费 / API 计费 / 不适用。已核对的官方单价见本批价格笔记，并标注查询日期；未核对或已过时的金额不写入

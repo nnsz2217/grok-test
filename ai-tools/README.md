@@ -6,11 +6,12 @@
 
 ## 当前内容
 
-- [高级技巧索引](./advanced-usage-index.md)：按产品和主题检索已写入的技巧。第一批已填 ChatGPT、Grok、Codex；其余分类仅有占位说明。
+- [高级技巧索引](./advanced-usage-index.md)：按产品和主题检索已写入的技巧。第一批已填 ChatGPT、Grok、Codex；本批增补 DeepSeek 与 ChatGPT 的 API / 成本笔记。Claude 技巧正文、Gemini、其他工具、跨平台技巧和高级工作流仍仅有占位说明。
 - [ChatGPT](./ChatGPT.md)：对照官方文档整理网页、手机和 Windows 入口，适合大学生的对话 / Work / 项目用法，以及地区、用量和准确性方面的限制。未在该总览中展开 Codex，也未核价格。「本轮访问情况（2026-11-25，Asia/Shanghai）」记录研究环境请求 https://chatgpt.com 返回 HTTP 403（未登录、未做功能测试，Unverified）；官方支持地区名单仍为 Officially Documented。Codex 本轮未做上手测试（Unverified）。更细的技巧见 [chatgpt/](./chatgpt/)。
 - [Codex](./Codex.md)：对照官方学习文档整理 ChatGPT 桌面应用、IDE 扩展、CLI 和 Cloud 入口，说明它适合软件开发、与 Chat / Work 的分工，以及 Windows、沙箱、地区和用量方面的限制。本轮未安装、未登录、未运行，状态为 Unverified。更细的技巧见 [codex/](./codex/)。
 - [Claude](./Claude.md)：对照官方文档整理 claude.ai、桌面应用和手机入口，适合带资料提问和用项目做课程工作区的用法，以及年龄、地区、共用额度等限制。未写 Claude Code 操作步骤，也未核价格。同日访问记录：打开 https://claude.ai 返回 HTTP 200，并重定向到 https://claude.com/app-unavailable-in-region#_（未登录、未做功能测试，Unverified）；官方支持地点名单仍为 Officially Documented。高级技巧目录 [claude/](./claude/) 目前仅有占位说明，待后续批次。
 - [Grok](./Grok.md)：对照官方文档整理 grok.com 与 iOS / Android 入口，适合对话、上传材料和生成内容的用法，以及用量、水印和地区说明不完整等限制。以 grok.com / 官方应用为准，未评测 Grok Bot，也未核价格。官方写明的文件上传仍是 Officially Documented 的产品说明，不是已完成的上手测试。同日未登录访问中，附件控件没有打开文件选择器，文件上传问答未完成（Unverified）。更细的技巧见 [grok/](./grok/)。
+- [DeepSeek](./DeepSeek.md)：对照官方文档整理网页、官方 App、API 和 Harness 桌面端入口，适合课程问答、上传材料和按量调用的用法，以及网页/App「免费体验」与 API 计费不是同一套账等限制。本批新增总览与 [deepseek/](./deepseek/) 技巧正文；没有登录，也没有发送 API 请求，不标 Verified。2026-11-25 的未登录访问记录写在该总览中，并保留本页下文已有的同日观察原文。
 
 ## 以后怎么加笔记
 
@@ -22,11 +23,11 @@
 
 ## 以后可能补的主题（尚未检索、尚未核实）
 
-下面只是预定的笔记位置。没有结论，不能当资料用。第一批只完成 ChatGPT、Grok、Codex 的技巧正文；其余子目录若已建立，也只是占位说明。
+下面只是预定的笔记位置。没有结论，不能当资料用。第一批完成了 ChatGPT、Grok、Codex 的技巧正文；本批补充了 DeepSeek 总览与技巧，以及 ChatGPT 的 API / 成本笔记。其余子目录若尚未写入正文，仍只是占位说明。
 
-Gemini 和 DeepSeek 仍没有单独总览笔记。2026-11-25 只做了未登录查看，没有上传文件，登录测试按要求没有继续，状态为 Unverified：https://gemini.google.com/app 有输入区，但 Upload files、Add from Drive、More uploads 为禁用，并显示 “Sign in to try tools”；https://chat.deepseek.com 重定向到 https://chat.deepseek.com/sign_in（手机号/短信、密码、Apple、微信）。本批不新建 Gemini.md 或 DeepSeek.md。部分 Gemini 功能需要谷歌帐户，后续若写笔记会单独标明。
+Gemini 在 2026-11-25 仍没有单独总览笔记。同日只做了未登录查看，没有上传文件，登录测试按要求没有继续，状态为 Unverified：https://gemini.google.com/app 有输入区，但 Upload files、Add from Drive、More uploads 为禁用，并显示 “Sign in to try tools”；https://chat.deepseek.com 重定向到 https://chat.deepseek.com/sign_in（手机号/短信、密码、Apple、微信）。后一句 DeepSeek 观察仍保留在此，详细说明已写入 [DeepSeek.md](./DeepSeek.md)。本批仍不新建 Gemini.md。部分 Gemini 功能需要谷歌帐户，后续若写笔记会单独标明。
 
-- [ ] DeepSeek 的高级用法（[deepseek/](./deepseek/) 目前仅占位）
+- [x] DeepSeek 的高级用法（总览见 [DeepSeek.md](./DeepSeek.md)，技巧见 [deepseek/](./deepseek/)；本轮未登录、未发 API 请求，不标 Verified）
 - [ ] Claude 的高级技巧正文（总览已有；[claude/](./claude/) 目前仅占位）
 - [ ] Gemini 的高级用法（[gemini/](./gemini/) 目前仅占位）
 - [ ] 其他已核对工具（[other-tools/](./other-tools/) 目前仅占位）
@@ -36,5 +37,5 @@ Gemini 和 DeepSeek 仍没有单独总览笔记。2026-11-25 只做了未登录�
 ## 元数据
 
 - 更新时间：2026-11-25（Asia/Shanghai）
-- 来源：本目录当前文件清单；ChatGPT、Claude、Grok 三篇总览的官方文档来源与 2026-11-25 访问记录见各篇文末。Codex 总览与 `chatgpt/`、`grok/`、`codex/` 技巧笔记的来源见各篇文末。Gemini、DeepSeek 没有单独总览；本页仍保留同日未登录查看 https://gemini.google.com/app 与 https://chat.deepseek.com 的结果。其余工具名单仍来自知识库结构规划
-- 信息可信度：部分核对。本页作为索引已与当前文件清单对齐。总览中对照官方文档的内容为 Officially Documented；2026-11-25 的地区访问和未登录入口观察为 Unverified，文件上传没有完成，不能当作已经完成的上手使用。第一批新增的 Codex 总览与三套技巧目录对照官方文档整理，本轮同样没有登录实操，不能标为 Verified。DeepSeek、Claude 技巧正文、Gemini、其他工具、跨平台技巧和高级工作流仍待后续研究补充
+- 来源：本目录当前文件清单；ChatGPT、Claude、Grok、DeepSeek 总览的官方文档来源与 2026-11-25 访问记录见各篇文末。Codex 总览与 `chatgpt/`、`grok/`、`codex/`、`deepseek/` 技巧笔记的来源见各篇文末。本页仍保留同日未登录查看 https://gemini.google.com/app 与 https://chat.deepseek.com 的原文。其余工具名单仍来自知识库结构规划
+- 信息可信度：部分核对。本页作为索引应与增补后的文件清单对齐。总览中对照官方文档的内容为 Officially Documented；2026-11-25 的地区访问和未登录入口观察为 Unverified，文件上传和 API 调用没有完成，不能当作已经完成的上手使用。本批新增的 DeepSeek 笔记与 ChatGPT API / 成本笔记同样没有登录实操，不能标为 Verified。Claude 技巧正文、Gemini、其他工具、跨平台技巧和高级工作流仍待后续研究补充
