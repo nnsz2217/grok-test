@@ -26,11 +26,17 @@
 
 - **会说错，而且可能说得很有把握。** 官方称之为幻觉，例如编造定义、日期、并不存在的引用或文献。重要信息必须自己对照可靠来源，尤其是作业、引用和数据。
 - **有用量限制。** 限制随方案和模型而变，也会随时间调整。Free 有基础限额，Plus / Pro 等付费方案限额更高，具体数字以账户和官方说明为准。本篇不写未核对的价格。
-- **地区限制。** 必须从官方支持的国家和地区访问。截至 2026-11-25 查询，[官方支持名单](https://help.openai.com/en/articles/7947663-chatgpt-and-openai-api-supported-countries-and-territories) 未列出中国大陆、香港特别行政区和澳门特别行政区。在名单以外访问或提供访问，可能导致账号被限制或停用。本篇只记录官方名单，不讨论绕过方法。
+- **地区限制。** 必须从官方支持的国家和地区访问。截至 2026-11-25 查询，[官方支持名单](https://help.openai.com/en/articles/7947663-chatgpt-and-openai-api-supported-countries-and-territories) 未列出中国大陆、香港特别行政区和澳门特别行政区。在名单以外访问或提供访问，可能导致账号被限制或停用。这一名单的状态是 Officially Documented。不讨论绕过方法。同一天从研究环境得到的访问结果写在下一节，状态为 Unverified，不是 OpenAI 的官方声明。
 - **不能替代专业判断。** 涉及法律、财务、医疗、安全等重大决定时，需要相应专业人士把关。
 - **它不能可靠判断一段文字是不是 AI 写的**，包括“这是不是你写的这篇作文”。这类回答不能当证据。
 - **功能和入口会因方案、平台、地区和逐步开放而不同。** 例如 Temporary Chat（临时对话）不会出现在历史里、不会使用或生成记忆，也不会用于训练模型，适合需要额外隐私的单次对话。
 - ChatGPT 界面里还有 Codex 入口，面向偏开发的技术工作。本篇不写 Codex，以免和后续专题重复。
+
+## 本轮访问情况（2026-11-25，Asia/Shanghai）
+
+- **官方支持地区名单：Officially Documented。** 截至 2026-11-25，[官方支持名单](https://help.openai.com/en/articles/7947663-chatgpt-and-openai-api-supported-countries-and-territories) 未列出中国大陆、香港特别行政区和澳门特别行政区。这与上一节记录的官方名单是同一条事实。
+- **研究环境访问结果：Unverified。** 2026-11-25，从一台公网出口位于中国浙江省宁波市的研究环境请求 https://chatgpt.com，返回 HTTP 403。没有登录，也没有做功能测试。这是该环境的访问结果，不是 OpenAI 的官方声明，也不是已经上手使用 ChatGPT。不讨论绕过方法。
+- **Codex：Unverified。** 本轮没有对 Codex 做上手测试，因为同一环境无法访问 ChatGPT。Codex 仍不在本篇操作范围内。这里不写 Codex 的用法。
 
 ## 元数据
 
@@ -45,7 +51,8 @@
   - [Using the ChatGPT Windows app](https://help.openai.com/en/articles/9982051-using-the-chatgpt-windows-app)
   - [ChatGPT and OpenAI API supported countries and territories](https://help.openai.com/en/articles/7947663-chatgpt-and-openai-api-supported-countries-and-territories)
   - [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
-- 信息可信度：部分核对。以上事实已对照 2026-11-25 可访问的官方文档；未在中国大陆或不支持地区做登录实测，也未核对手表价或各方案具体配额。Windows 桌面应用的适用方案，两处官方说明不一致，已在正文标明。
-- 平台：已核对网页 chatgpt.com、官方所述 iOS / Android 应用，以及 Windows 10（17763.0 或更高）上的官方桌面应用说明。未实测具体机型。
+  - 2026-11-25 研究环境访问：对 https://chatgpt.com 的一次 HTTP 请求（公网出口位于中国浙江省宁波市；返回 403）。不是官方文档，未登录，未做功能测试。
+- 信息可信度：部分核对。对照官方文档的事实（含截至 2026-11-25 的支持地区名单，未列出中国大陆、香港特别行政区和澳门特别行政区）状态为 Officially Documented。2026-11-25 新增的研究环境访问记录（https://chatgpt.com 返回 HTTP 403；未登录、未做功能测试）以及本轮未测 Codex，状态均为 Unverified，不能当作上手使用。未核对手表价或各方案具体配额。Windows 桌面应用的适用方案，两处官方说明不一致，已在正文标明。
+- 平台：已核对官方文档中的网页 chatgpt.com、iOS / Android 应用，以及 Windows 10（17763.0 或更高）上的官方桌面应用说明。2026-11-25 研究环境对 chatgpt.com 的请求返回 HTTP 403，未做功能测试。未实测具体机型。
 - 技能门槛：会用浏览器访问网站、注册或登录账号，并能用中文或英文写出自己的任务。不需要编程。
 - 费用：免费 / 付费。官方写明有 Free，以及 Plus、Pro、Business、Enterprise 等付费或团队方案；未核对具体价格，故不写入金额。
