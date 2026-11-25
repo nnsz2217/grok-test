@@ -22,6 +22,10 @@
 
 对非计算机专业的学生，比较稳妥的用法是：先用自己的话说明目标、关键约束和想要的格式，把第一次回复当成草稿，再用“写短一点”“给三个不同思路”“先问我几个问题再继续”来改。官方也提醒：回复写得再完整，仍可能有错，用之前要核对关键数字、姓名、日期、引文和出处。
 
+## 更细的高级技巧
+
+本篇只整理入口、适合的任务和已经写明的限制。项目说明、记忆、深度研究、学习模式、文件分析、Work、插件与自定义 GPT 过渡等更细的操作，见 [chatgpt/](./chatgpt/) 目录，并收入 [advanced-usage-index.md](./advanced-usage-index.md)。那些笔记对照官方文档整理，本轮没有登录实操，不能当作已经实测成功。
+
 ## 限制
 
 - **会说错，而且可能说得很有把握。** 官方称之为幻觉，例如编造定义、日期、并不存在的引用或文献。重要信息必须自己对照可靠来源，尤其是作业、引用和数据。
@@ -51,8 +55,9 @@
   - [Using the ChatGPT Windows app](https://help.openai.com/en/articles/9982051-using-the-chatgpt-windows-app)
   - [ChatGPT and OpenAI API supported countries and territories](https://help.openai.com/en/articles/7947663-chatgpt-and-openai-api-supported-countries-and-territories)
   - [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
+  - 本库补充的高级技巧目录：[chatgpt/](./chatgpt/)、[advanced-usage-index.md](./advanced-usage-index.md)。这些笔记对照官方文档整理，本轮没有登录实操，不能当作上手使用。
   - 2026-11-25 研究环境访问：对 https://chatgpt.com 的一次 HTTP 请求（公网出口位于中国浙江省宁波市；返回 403）。不是官方文档，未登录，未做功能测试。
-- 信息可信度：部分核对。对照官方文档的事实（含截至 2026-11-25 的支持地区名单，未列出中国大陆、香港特别行政区和澳门特别行政区）状态为 Officially Documented。2026-11-25 新增的研究环境访问记录（https://chatgpt.com 返回 HTTP 403；未登录、未做功能测试）以及本轮未测 Codex，状态均为 Unverified，不能当作上手使用。未核对手表价或各方案具体配额。Windows 桌面应用的适用方案，两处官方说明不一致，已在正文标明。
+- 信息可信度：部分核对。对照官方文档的事实（含截至 2026-11-25 的支持地区名单，未列出中国大陆、香港特别行政区和澳门特别行政区）状态为 Officially Documented。2026-11-25 新增的研究环境访问记录（https://chatgpt.com 返回 HTTP 403；未登录、未做功能测试）以及本轮未测 Codex，状态均为 Unverified，不能当作上手使用。本篇新增的高级技巧目录链接指向同批对照官方文档整理的笔记，同样未经登录实测。未核对手表价或各方案具体配额。Windows 桌面应用的适用方案，两处官方说明不一致，已在正文标明。
 - 平台：已核对官方文档中的网页 chatgpt.com、iOS / Android 应用，以及 Windows 10（17763.0 或更高）上的官方桌面应用说明。2026-11-25 研究环境对 chatgpt.com 的请求返回 HTTP 403，未做功能测试。未实测具体机型。
 - 技能门槛：会用浏览器访问网站、注册或登录账号，并能用中文或英文写出自己的任务。不需要编程。
 - 费用：免费 / 付费。官方写明有 Free，以及 Plus、Pro、Business、Enterprise 等付费或团队方案；未核对具体价格，故不写入金额。
