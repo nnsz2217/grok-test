@@ -34,6 +34,11 @@
 - **桌面应用能做的事取决于方案。** Windows 10 可以安装官方 Desktop，但不等于免费方案拥有全部桌面功能。例如官方写明 Claude Cowork 面向付费方案（Pro、Max、Ultra、Team、Enterprise）。
 - 本篇不写 Claude Code 的操作步骤。
 
+## 本轮访问情况（2026-11-25，Asia/Shanghai）
+
+- **官方支持地点名单：Officially Documented。** 截至 2026-11-25，[官方支持名单](https://support.claude.com/en/articles/8461763-where-can-i-access-claude) 未列出中国大陆、香港特别行政区和澳门特别行政区。这与上文记录的官方名单是同一条事实。
+- **研究环境访问结果：Unverified。** 2026-11-25，从与 ChatGPT 笔记相同的研究环境（公网出口位于中国浙江省宁波市）打开 https://claude.ai，返回 HTTP 200，并重定向到 https://claude.com/app-unavailable-in-region#_。没有登录，也没有做功能测试。官方名单的状态是 Officially Documented；这次重定向是该环境观察到的访问结果，不是已完成的上手使用。不讨论绕过方法。
+
 ## 元数据
 
 - 更新时间：2026-11-25（Asia/Shanghai）
@@ -45,7 +50,8 @@
   - [Install Claude Desktop](https://support.claude.com/en/articles/10065433-install-claude-desktop)
   - [What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects)
   - [Getting started with Claude · Claude Academy](https://academy.claude.com/tutorials/getting-started-with-claude)
-- 信息可信度：部分核对。以上事实已对照 2026-11-25 可访问的官方帮助中心和 Claude Academy；未在中国大陆或不支持地区做登录实测，也未核对手表价或各方案具体消息条数。网页搜索在各方案上的默认开关来自 Claude Academy，不是帮助中心同一条目，已单独标注来源。
-- 平台：已核对网页 claude.ai、官方所述 iOS / Android 应用，以及 Windows 10 或更高版本可安装 Claude Desktop 的说明。未实测具体机型。
+  - 2026-11-25 研究环境访问：打开 https://claude.ai（公网出口位于中国浙江省宁波市；HTTP 200，并重定向到 https://claude.com/app-unavailable-in-region#_）。不是官方文档，未登录，未做功能测试。
+- 信息可信度：部分核对。对照官方文档的事实（含截至 2026-11-25 的支持地点名单，未列出中国大陆、香港特别行政区和澳门特别行政区）状态为 Officially Documented。2026-11-25 新增的研究环境访问记录（打开 https://claude.ai 返回 HTTP 200，并重定向到地区不可用页面；未登录、未做功能测试）状态为 Unverified，不能当作上手使用。未核对手表价或各方案具体消息条数。网页搜索在各方案上的默认开关来自 Claude Academy，不是帮助中心同一条目，已单独标注来源。
+- 平台：已核对官方文档中的网页 claude.ai、iOS / Android 应用，以及 Windows 10 或更高版本可安装 Claude Desktop 的说明。2026-11-25 研究环境打开 claude.ai 得到 HTTP 200 并重定向到地区不可用页面，未做功能测试。未实测具体机型。
 - 技能门槛：会用浏览器访问网站、注册或登录账号，并能用中文或英文说明自己的任务。不需要编程。使用须年满 18 岁。
 - 费用：免费 / 付费。官方写明有免费方案，以及 Pro、Max、Ultra、Team、Enterprise 等付费或团队方案；未核对具体价格，故不写入金额。

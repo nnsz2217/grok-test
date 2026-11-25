@@ -32,6 +32,12 @@
 - **生成的图像和视频带水印，不能关闭。**
 - 本篇不评测 Grok Bot，也不把 X 平台里的 Grok 当成同一个产品来写操作步骤。
 
+## 本轮访问情况（2026-11-25，Asia/Shanghai）
+
+- **文件上传的官方产品说明：Officially Documented。** 官方文档写明 grok.com 以及 iOS、Android 可以上传文件。这是产品说明，不是本轮已经完成的上手测试。
+- **未登录文件上传问答：Unverified。** 2026-11-25，未登录打开 https://grok.com，页面上有可用的输入区，提示为 “What’s on the agenda today?” 和 “Message Grok”，并能看到 Sign in / Sign up。用 Reject All 关闭 cookie 提示后，点击标注为 “Add files, skills, and connectors” 的附件控件，没有打开文件选择器，而是立刻出现 Log in 窗口，选项为 Continue with Google、X、Apple、GitHub，或邮箱。示例文件没有附上，也没有发出问题。因此未登录状态下的文件上传问答没有完成。按本轮要求，登录测试没有继续。
+- 在其他界面里与 Grok Bot 聊天，不是 grok.com 上的文件上传测试。本篇不把这类聊天写成上传结果。
+
 ## 元数据
 
 - 更新时间：2026-11-25（Asia/Shanghai）
@@ -40,7 +46,8 @@
   - [FAQ - Grok Website / Apps](https://docs.x.ai/grok/faq)
   - [Grok 产品页](https://x.ai/grok)
   - [Consumer FAQs](https://x.ai/legal/faq)
-- 信息可信度：部分核对。以上事实已对照 2026-11-25 可访问的官方文档；未做登录后的全功能实测，也未核对手表价或每周用量的具体数值。Consumer FAQs 页面标注日期为 2025-05-12，其中与现行概览、FAQ 一致的入口和地区原则说明仍采用，并以 2026 年文档为准核对用量机制；完整支持地区名单官方未公布，已在正文标明。
-- 平台：已核对网页 grok.com（官方建议 Chrome / Chromium 浏览器）以及官方所述 iOS / Android 应用。Windows 仅核对“用浏览器访问网页”这一官方入口，无独立桌面应用说明。未实测具体机型。
+  - 2026-11-25 未登录访问：打开 https://grok.com。看到输入区与 Sign in / Sign up；Reject All 之后点击 “Add files, skills, and connectors” 未打开文件选择器，出现 Log in 窗口。示例文件未附上，问题未发送。不是官方文档，也不是已完成的文件上传问答。
+- 信息可信度：部分核对。对照官方文档的事实状态为 Officially Documented，其中包括 grok.com / iOS / Android 可以上传文件这一产品说明；该说明不是已完成的上手测试。2026-11-25 新增的未登录访问（附件控件未打开文件选择器，出现登录窗口；文件未附上、问题未发送，登录测试没有继续）状态为 Unverified。未做登录后的功能实测，也未核对手表价或每周用量的具体数值。Consumer FAQs 页面标注日期为 2025-05-12，其中与现行概览、FAQ 一致的入口和地区原则说明仍采用，并以 2026 年文档为准核对用量机制；完整支持地区名单官方未公布，已在正文标明。
+- 平台：已核对官方文档中的网页 grok.com（官方建议 Chrome / Chromium 浏览器）以及 iOS / Android 应用。2026-11-25 未登录打开 grok.com 能看到输入区，文件上传问答未完成。Windows 仅核对“用浏览器访问网页”这一官方入口，无独立桌面应用说明。未实测具体机型。
 - 技能门槛：会用浏览器打开网站、注册或登录账号，并能用中文或英文说明任务。不需要编程。须年满 13 岁；未满 18 岁须获得监护人同意。
 - 费用：免费 / 付费。官方写明可免费开始，付费方案名为 SuperGrok；未核对具体价格，故不写入金额。
